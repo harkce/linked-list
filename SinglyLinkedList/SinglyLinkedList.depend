@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1442420886 source:d:\programming\cpp\new\singlylinkedlist\main.cpp
+	"list.h"
+	"list.cpp"
+
+1442400298 d:\programming\cpp\new\singlylinkedlist\list.h
+
+1442402428 d:\programming\cpp\new\singlylinkedlist\list.cpp
+	<iostream>
+	<cstdlib>
+	"list.h"
+
+1442363764 source:d:\programming\cpp\new\singlylinkedlist\list.cpp
+	<iostream>
+	<cstdlib>
+	"list.h"
+
+1442402552 d:\programming\cpp\new\singlylinkedlist\list2.cpp
+	<iostream>
+	<cstdlib>
+	"list.h"
+
