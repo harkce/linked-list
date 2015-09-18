@@ -29,7 +29,9 @@ address alokasi(infotype x) {
     return P;
 }
 
-// void deaolkasi(address P);
+void deaolkasi(address P) {
+    delete(P);
+}
 
 void insertFirst(list &L, address P) {
     next(P) = first(L);
