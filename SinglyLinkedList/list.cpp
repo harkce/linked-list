@@ -48,7 +48,7 @@ void insertAfter(list &L, address P, address Prec) {
     next(Prec) = P;
 }
 
-void insertAfterValue(list &L, infotype N, infotype X) {
+void insertAfterValue(list &L, infotype N, infotype X) {    // Insert N setelah X
     address Prec = first(L);
     while(info(Prec) != X && next(Prec) != Nil)
     {
@@ -91,6 +91,59 @@ void insertLastValue(list &L, infotype N) {
     {
         address P = alokasi(N);
         insertLast(L, P);
+    }
+}
+
+void deleteFirst(list &L) {
+    if(first(L) != Nil)
+    {
+        address P = first(L);
+        if(next(P) == Nil)
+        {
+            first(L) = Nil;
+        }
+        else
+        {
+            first(L) = next(P);
+            next(P) = Nil;
+        }
+    }
+}
+/*
+void deleteAfter(list &L, address Prec) {
+    if(first(L) != Nil)
+    {
+        if(next(next(Prec)) == Nil)
+        {
+            address P = next(Prec);
+            next(Prec) = Nil;
+        }
+        else
+        {
+            address P = next(Prec);
+            next(Prec) = next(P);
+            next(P) = Nil;
+        }
+    }
+}
+*/
+void deleteLast(list &L) {
+    if(first(L) != Nil)
+    {
+        address P = first(L);
+        if(next(P) == Nil)
+        {
+            deleteFirst(L);
+        }
+        else
+        {
+            while(next(next(P)) != Nil)
+            {
+                P = next(P);
+            }
+            address Q = next(P);
+            next(P) = Nil;
+        }
     }
 }
 
